@@ -4,7 +4,7 @@
   --sky: #219ebc;
   --sky-deep: #126782;
   --cream: #fff8ec;
-  --ink: #2b2118;
+  --ink: #000;
   --shadow: rgba(43, 33, 24, 0.12);
 }
 
@@ -72,7 +72,7 @@ body {
   letter-spacing: 0.2em;
   font-weight: 500;
   font-size: 0.8rem;
-  color: var(--sky-deep);
+  color: #000;
 }
 
 .intro__title {
@@ -81,7 +81,7 @@ body {
   font-size: clamp(2.8rem, 6vw, 4rem);
   line-height: 1.05;
   margin: 0.3rem 0;
-  color: var(--sun-deep);
+  color: #000;
 }
 
 .intro__tagline {
@@ -104,16 +104,11 @@ body {
   align-items: flex-start;
 }
 
-.fact__icon {
-  font-size: 1.6rem;
-  line-height: 1;
-}
-
 .fact__label {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--sun-deep);
+  color: #000;
 }
 
 .fact__value {
@@ -123,7 +118,7 @@ body {
 /* ---------- Blurb ---------- */
 .blurb {
   margin-bottom: 2.25rem;
-  color: #5a4d40;
+  color: #000;
 }
 
 /* ---------- RSVP ---------- */
@@ -134,7 +129,7 @@ body {
 
 .rsvp__title {
   font-size: 1.3rem;
-  color: var(--sky-deep);
+  color: #000;
   margin-bottom: 1rem;
 }
 
@@ -161,7 +156,7 @@ body {
 .rsvp__note {
   margin-top: 1rem;
   font-size: 0.9rem;
-  color: #7a6e60;
+  color: #000;
 }
 
 /* ---------- Mobile: stack, image on top ---------- */
