@@ -10,60 +10,64 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="hero">
-    <div class="hero__content">
-      <p class="hero__eyebrow">You're invited to our</p>
-      <h1 class="hero__title">Summer Party</h1>
-      <p class="hero__tagline">Sunshine, good food, and even better company.</p>
-      <!--
-        RSVP BUTTON
-        ===========
-        Paste your Google Form share link between the quotes in href below.
-        In Google Forms: click "Send" → the link (chain) icon → copy the URL.
-      -->
-      <a class="btn btn--primary" href="PASTE_YOUR_GOOGLE_FORM_LINK_HERE" target="_blank" rel="noopener">
-        RSVP Now
-      </a>
-    </div>
-  </header>
+  <div class="split">
+    <!-- LEFT: info + RSVP, scrolls independently -->
+    <section class="panel">
+      <div class="panel__inner">
+        <header class="intro">
+          <p class="intro__eyebrow">You're invited to our</p>
+          <h1 class="intro__title">Summer Party</h1>
+          <p class="intro__tagline">Sunshine, good food, and even better company.</p>
+        </header>
 
-  <main>
-    <section class="details" aria-labelledby="details-heading">
-      <h2 id="details-heading" class="section-title">The Details</h2>
-      <div class="cards">
-        <div class="card">
-          <span class="card__icon" aria-hidden="true">📅</span>
-          <h3 class="card__title">When</h3>
-          <p class="card__text">Saturday, July 18, 2026<br />from 2:00 PM until late</p>
-        </div>
-        <div class="card">
-          <span class="card__icon" aria-hidden="true">📍</span>
-          <h3 class="card__title">Where</h3>
-          <p class="card__text">123 Garden Lane<br />Backyard — look for the balloons!</p>
-        </div>
-        <div class="card">
-          <span class="card__icon" aria-hidden="true">🎒</span>
-          <h3 class="card__title">Bring</h3>
-          <p class="card__text">Your swimsuit, a side dish to share, and good vibes.</p>
+        <ul class="facts">
+          <li class="fact">
+            <span class="fact__icon" aria-hidden="true">📅</span>
+            <div>
+              <h2 class="fact__label">When</h2>
+              <p class="fact__value">Saturday, July 18, 2026 · 2:00 PM until late</p>
+            </div>
+          </li>
+          <li class="fact">
+            <span class="fact__icon" aria-hidden="true">📍</span>
+            <div>
+              <h2 class="fact__label">Where</h2>
+              <p class="fact__value">123 Garden Lane — backyard, look for the balloons!</p>
+            </div>
+          </li>
+          <li class="fact">
+            <span class="fact__icon" aria-hidden="true">🎒</span>
+            <div>
+              <h2 class="fact__label">Bring</h2>
+              <p class="fact__value">Swimsuit, a side dish to share, and good vibes.</p>
+            </div>
+          </li>
+        </ul>
+
+        <p class="blurb">
+          Join us for an afternoon and evening of barbecue, lawn games, music,
+          and a sunset to remember. Cold drinks all around — we can't wait to
+          celebrate summer with you!
+        </p>
+
+        <div class="rsvp">
+          <h2 class="rsvp__title">Will you be there?</h2>
+          <!--
+            RSVP BUTTON
+            ===========
+            Paste your Google Form share link between the quotes in href below.
+            In Google Forms: click "Send" -> the link (chain) icon -> copy the URL.
+          -->
+          <a class="btn btn--primary" href="PASTE_YOUR_GOOGLE_FORM_LINK_HERE" target="_blank" rel="noopener">
+            RSVP Now
+          </a>
+          <p class="rsvp__note">Questions? Just reply to the invite or text us. ☀️</p>
         </div>
       </div>
     </section>
 
-    <section class="about" aria-labelledby="about-heading">
-      <h2 id="about-heading" class="section-title">What to Expect</h2>
-      <p class="about__text">
-        Join us for an afternoon and evening of barbecue, lawn games, music, and
-        a sunset to remember. There'll be plenty for the kids, a shady spot to
-        relax, and cold drinks all around. We can't wait to celebrate summer with you!
-      </p>
-      <a class="btn btn--primary" href="PASTE_YOUR_GOOGLE_FORM_LINK_HERE" target="_blank" rel="noopener">
-        Let us know you're coming
-      </a>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>Questions? Reply to the invite or text us. See you in the sun! ☀️</p>
-  </footer>
+    <!-- RIGHT: full-bleed image -->
+    <aside class="hero-image" role="img" aria-label="Sunny summer backyard party"></aside>
+  </div>
 </body>
 </html>
