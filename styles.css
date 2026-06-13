@@ -20,7 +20,7 @@ body {
 }
 
 body {
-  font-family: "Poppins", system-ui, sans-serif;
+  font-family: "Figtree", system-ui, sans-serif;
   color: var(--ink);
   background: var(--cream);
   line-height: 1.6;
@@ -76,7 +76,8 @@ body {
 }
 
 .intro__title {
-  font-family: "Pacifico", cursive;
+  font-family: "Figtree", system-ui, sans-serif;
+  font-weight: 800;
   font-size: clamp(2.8rem, 6vw, 4rem);
   line-height: 1.05;
   margin: 0.3rem 0;
