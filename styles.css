@@ -1,0 +1,140 @@
+:root {
+  --sun: #ffb703;
+  --sun-deep: #fb8500;
+  --sky: #219ebc;
+  --sky-deep: #126782;
+  --cream: #fff8ec;
+  --ink: #2b2118;
+  --shadow: rgba(43, 33, 24, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.6;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 4rem 1.5rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--sky) 0%, var(--sun) 100%);
+}
+
+.hero__content {
+  max-width: 640px;
+}
+
+.hero__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 500;
+  font-size: 0.85rem;
+  opacity: 0.95;
+}
+
+.hero__title {
+  font-family: "Pacifico", cursive;
+  font-size: clamp(3rem, 9vw, 5.5rem);
+  line-height: 1.05;
+  margin: 0.4rem 0;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+}
+
+.hero__tagline {
+  font-size: clamp(1.05rem, 2.5vw, 1.4rem);
+  margin-bottom: 2rem;
+  opacity: 0.97;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.9rem 2.2rem;
+  border-radius: 999px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn--primary {
+  background: var(--sun-deep);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(251, 133, 0, 0.4);
+}
+
+.btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(251, 133, 0, 0.5);
+}
+
+/* ---------- Sections ---------- */
+.section-title {
+  text-align: center;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  margin-bottom: 2rem;
+  color: var(--sky-deep);
+}
+
+.details,
+.about {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+/* ---------- Cards ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 10px 30px var(--shadow);
+}
+
+.card__icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.card__title {
+  color: var(--sun-deep);
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- About ---------- */
+.about {
+  text-align: center;
+}
+
+.about__text {
+  max-width: 620px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  background: var(--sky-deep);
+  color: var(--cream);
+}
