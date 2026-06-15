@@ -6,7 +6,7 @@
   <title>Summer Party 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Astloch:wght@700&family=Fraunces:wght@300;400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -14,51 +14,86 @@
     <!-- LEFT: info + RSVP, scrolls independently -->
     <section class="panel">
       <div class="panel__inner">
-        <header class="intro">
-          <p class="intro__eyebrow">You're invited to our</p>
+        <header class="intro"></header>
+          <svg class="peace" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="7" aria-hidden="true">
+            <circle cx="50" cy="50" r="44" />
+            <line x1="50" y1="6" x2="50" y2="94" />
+            <line x1="50" y1="50" x2="18.9" y2="81.1" />
+            <line x1="50" y1="50" x2="81.1" y2="81.1" />
+          </svg>
+          <p class="intro__eyebrow">Second Annual</p>
           <h1 class="intro__title">Summer Party</h1>
-          <p class="intro__tagline">Sunshine, good food, and even better company.</p>
+          <p class="intro__tagline">It’s summer, and we’re having a party for no other reason than to spend time with people we love. We hope you can join us.
+            
+          
         </header>
 
-        <ul class="facts">
-          <li class="fact">
-            <div>
-              <h2 class="fact__label">When</h2>
-              <p class="fact__value">Saturday, July 18, 2026 · 2:00 PM until late</p>
-            </div>
-          </li>
-          <li class="fact">
-            <div>
-              <h2 class="fact__label">Where</h2>
-              <p class="fact__value">123 Garden Lane — backyard, look for the balloons!</p>
-            </div>
-          </li>
-          <li class="fact">
-            <div>
-              <h2 class="fact__label">Bring</h2>
-              <p class="fact__value">Swimsuit, a side dish to share, and good vibes.</p>
-            </div>
-          </li>
-        </ul>
+        <p class="signature">Barb, Rob, Oliver, and Margot</p>
 
-        <p class="blurb">
-          Join us for an afternoon and evening of barbecue, lawn games, music,
-          and a sunset to remember. Cold drinks all around — we can't wait to
-          celebrate summer with you!
-        </p>
+          <h2 class="rsvp__title">Things to know</h2>
 
-        <div class="rsvp">
-          <h2 class="rsvp__title">Will you be there?</h2>
-          <!--
-            RSVP BUTTON
-            ===========
-            Paste your Google Form share link between the quotes in href below.
-            In Google Forms: click "Send" -> the link (chain) icon -> copy the URL.
-          -->
-          <a class="btn btn--primary" href="PASTE_YOUR_GOOGLE_FORM_LINK_HERE" target="_blank" rel="noopener">
-            RSVP Now
-          </a>
-          
+          <ul class="facts">
+            <li class="fact">
+              <div class="fact__col">
+                <p class="fact__value">Saturday, August 1, 2026<br /> 1:00 PM until whenever</p>
+              </div>
+              <div class="fact__col">
+                <p class="fact__value">Northport, MI<br> <a class="link" href="#rsvp" id="rsvpLink">RSVP</a> for exact location</p>
+              </div>
+            </li>
+          </ul>
+          <p class="details__text">There will be a taco truck serving up tacos and burritos, with pescatarian and vegetarian options.</p>
+          <p class="details__text">There will be a huge Jenga game and cornhole. Feel free to bring any other games.</p>
+          <p class="details__text">There will be a campfire, which means there will be s’mores.</p>
+          <p class="details__text">Bring something 100% cotton that you want to tie dye (like a shirt, pillowcase, tea towel, socks, etc.).</p>
+          <p class="details__text">Bring whatever you want to drink.</p>
+
+
+        <div class="rsvp" id="rsvp">
+
+          <form class="form" id="rsvpForm" method="POST"
+                action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfAXVhsxMBZOOvY-v_4-S081iOc6DwUjG2VoDnSuC3Wep7-PQ/formResponse"
+                target="rsvpSink">
+            <div class="field">
+              <span class="field__label">Can you join us?</span>
+              <div class="choice">
+                <label class="choice__option">
+                  <input type="radio" name="entry.1723311018" value="Yes" required />
+                  <span>Yes</span>
+                </label>
+                <label class="choice__option">
+                  <input type="radio" name="entry.1723311018" value="No" />
+                  <span>No</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="field">
+                <label class="field__label" for="firstName">First name</label>
+                <input class="field__input" id="firstName" name="entry.1429584853" type="text" autocomplete="given-name" required />
+              </div>
+              <div class="field">
+                <label class="field__label" for="lastName">Last name</label>
+                <input class="field__input" id="lastName" name="entry.834995599" type="text" autocomplete="family-name" required />
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="field field--rest">
+                <label class="field__label" for="email">Email address</label>
+                <input class="field__input" id="email" name="entry.2093470010" type="email" autocomplete="email" inputmode="email" required />
+              </div>
+              <div class="field field--quarter">
+                <label class="field__label" for="guests">Guests</label>
+                <input class="field__input" id="guests" name="entry.52705882" type="number" min="1" max="20" value="1" required />
+              </div>
+            </div>
+
+            <button class="btn btn--primary" type="submit">Send RSVP</button>
+          </form>
+          <p class="form__thanks" id="rsvpThanks" hidden>Thanks — your RSVP is in. See you there.</p>
+          <iframe name="rsvpSink" id="rsvpSink" title="RSVP submission target" style="display:none"></iframe>
         </div>
       </div>
     </section>
@@ -66,5 +101,39 @@
     <!-- RIGHT: full-bleed image -->
     <aside class="hero-image" role="img" aria-label="Sunny summer backyard party"></aside>
   </div>
+
+  <script>
+    (function () {
+      var link = document.getElementById('rsvpLink');
+      var form = document.getElementById('rsvp');
+      if (!link || !form) return;
+
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        form.classList.add('is-visible');
+        form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+
+      var rsvpForm = document.getElementById('rsvpForm');
+      var sink = document.getElementById('rsvpSink');
+      var thanks = document.getElementById('rsvpThanks');
+      var submitted = false;
+
+      if (rsvpForm && sink && thanks) {
+        rsvpForm.addEventListener('submit', function () {
+          // Form posts into the hidden iframe; flag it so the iframe's
+          // load event (which also fires on initial page load) only swaps
+          // the UI after a real submission.
+          submitted = true;
+        });
+
+        sink.addEventListener('load', function () {
+          if (!submitted) return;
+          rsvpForm.hidden = true;
+          thanks.hidden = false;
+        });
+      }
+    })();
+  </script>
 </body>
 </html>

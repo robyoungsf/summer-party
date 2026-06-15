@@ -3,8 +3,8 @@
   --sun-deep: #fb8500;
   --sky: #219ebc;
   --sky-deep: #126782;
-  --cream: #fff8ec;
-  --ink: #000;
+  --cream: #F2F1EE;
+  --ink: #3B5033;
   --shadow: rgba(43, 33, 24, 0.12);
 }
 
@@ -20,9 +20,9 @@ body {
 }
 
 body {
-  font-family: "Figtree", system-ui, sans-serif;
-  color: var(--ink);
-  background: var(--cream);
+  font-family: "Fraunces", Georgia, serif;
+  color: #5C7253;
+  background: #E3DCA7;
   line-height: 1.6;
 }
 
@@ -38,55 +38,58 @@ body {
 .panel {
   overflow-y: auto;
   display: flex;
-  align-items: center;
-  padding: 3rem clamp(1.5rem, 5vw, 4rem);
+  align-items: safe center;
+  padding: 4rem clamp(1.5rem, 5vw, 4rem) 3rem;
+  background: #E3DCA7;
 }
 
 .panel__inner {
   width: 100%;
   max-width: 520px;
   margin: 0 auto;
+  margin-top: 25%;
 }
 
-/* RIGHT: full-bleed image */
+/* LEFT: full-bleed photo */
 .hero-image {
+  order: -1;
   height: 100%;
-  background-color: var(--sky);
-  /*
-    FULL-BLEED IMAGE
-    ================
-    Drop your photo in this folder (e.g. images/party.jpg) and update the URL.
-    The gradient below shows through until you add one, and tints the photo
-    a touch so light text could sit on it later if you want.
-  */
-  background-image:
-    linear-gradient(135deg, rgba(33, 158, 188, 0.25), rgba(18, 103, 130, 0.25)),
-    url("images/party.jpg");
+  background-image: url("images/27.jpg");
   background-size: cover;
   background-position: center;
 }
 
 /* ---------- Intro ---------- */
 .intro__eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-weight: 400;
-  font-size: 0.8rem;
-  color: #000;
+  font-family: "Astloch", "Fraunces", Georgia, serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #3B5033;
 }
 
 .intro__title {
-  font-family: "Figtree", system-ui, sans-serif;
-  font-weight: 400;
-  font-size: clamp(2.8rem, 6vw, 4rem);
-  line-height: 1.05;
+  font-family: "Astloch", "Fraunces", Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(3.4rem, 7.5vw, 5rem);
+  line-height: 1.35;
   margin: 0.3rem 0;
-  color: #000;
+  color: #3B5033;
 }
 
 .intro__tagline {
-  font-size: 1.15rem;
-  margin-bottom: 2.25rem;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}
+
+/* ---------- Signature ---------- */
+.signature {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  font-weight: 300;
+  margin-top: 1.75rem;
+  margin-bottom: 4rem;
 }
 
 /* ---------- Facts ---------- */
@@ -104,57 +107,237 @@ body {
   align-items: flex-start;
 }
 
+.fact__col {
+  flex: 1;
+}
+
 .fact__label {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: #000;
+  color: #3B5033;
 }
 
 .fact__value {
   font-size: 1.02rem;
 }
 
+.link {
+  color: inherit;
+  text-decoration: underline dashed;
+  text-underline-offset: 0.2em;
+  cursor: pointer;
+}
+
+.is-hidden {
+  display: none;
+}
+
+/* ---------- Details ---------- */
+.details {
+  padding: 1.25rem 0;
+  margin-bottom: 2rem;
+}
+
+.details__text {
+  font-size: 1.02rem;
+  line-height: 1.3rem;
+  font-weight: 300;
+}
+
+.details__text + .details__text {
+  margin-top: 0.9rem;
+}
+
 /* ---------- Blurb ---------- */
 .blurb {
   margin-bottom: 2.25rem;
-  color: #000;
+  color: #3B5033;
 }
 
 /* ---------- RSVP ---------- */
 .rsvp {
-  border-top: 2px dashed rgba(0, 0, 0, 0.25);
-  padding-top: 1.75rem;
+  padding-top: 3rem;
+  display: block;
+}
+
+.rsvp.is-visible {
+  display: block;
 }
 
 .rsvp__title {
-  font-size: 1.3rem;
-  color: #000;
+  font-family: "Astloch", "Fraunces", Georgia, serif;
+  font-size: 1.7rem;
+  color: #3B5033;
   margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+/* ---------- Form ---------- */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.form__thanks {
+  font-size: 1.1rem;
+  color: #3B5033;
+  margin: 0.5rem 0 0;
+}
+
+.form__row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form__row .field {
+  flex: 1;
+}
+
+.form__row .field--quarter {
+  flex: 0 0 25%;
+}
+
+.form__row .field--rest {
+  flex: 1;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.field__label {
+  font-size: 1rem;
+  color: #5C7253;
+}
+
+/* segmented control */
+.choice {
+  display: flex;
+  background: #EDE8C0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.choice__option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 0.7rem 0.9rem;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: normal;
+  color: var(--ink);
+  transition: color 0.15s ease;
+}
+
+/* the inset pill is a background-only layer so the text box never shifts */
+.choice__option::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 3px;
+  background: transparent;
+  transition: background 0.15s ease;
+}
+
+/* keep the label text above the pill */
+.choice__option span {
+  position: relative;
+  z-index: 1;
+}
+
+/* hide the native radio; the segment is the control */
+.choice__option input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* selected segment shows the inset pill in the input color */
+.choice__option:has(input:checked)::before {
+  background: #F6F3D8;
+}
+
+/* Yes (left): inset on top, left, bottom — flush to center on the right */
+.choice__option:first-child:has(input:checked)::before {
+  inset: 5px 0 5px 5px;
+}
+
+/* No (right): inset on top, right, bottom — flush to center on the left */
+.choice__option:last-child:has(input:checked)::before {
+  inset: 5px 5px 5px 0;
+}
+
+
+.field__input {
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--ink);
+  background: #F6F3D8;
+  border: 0px;
+  border-radius: 4px;
+  padding: 0.7rem 0.9rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.field__input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.field__input:focus {
+  outline: none;
+  border-color: var(--ink);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.18);
 }
 
 .btn {
   display: inline-block;
   font-weight: 400;
   text-decoration: none;
-  padding: 0.9rem 2.4rem;
-  border-radius: 999px;
+  padding: 0.7rem 2.4rem;
+  border-radius: 4px;
+  line-height: normal;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
+.form .btn {
+  margin-bottom: 4rem;
+  align-self: flex-start;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
 .btn--primary {
-  background: #000;
-  color: #fff;
+  background: #3B5033;
+  color: #F0EED8;
 }
 
 .btn--primary:hover {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
 .rsvp__note {
   margin-top: 1rem;
   font-size: 0.9rem;
-  color: #000;
+  color: #5C7253;
+}
+
+.peace {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  color: #3B5033;
+  z-index: 10;
 }
 
 /* ---------- Mobile: stack, image on top ---------- */
@@ -163,6 +346,7 @@ body {
     grid-template-columns: 1fr;
     height: auto;
     min-height: 100vh;
+    position: relative;
   }
 
   .hero-image {
@@ -172,5 +356,20 @@ body {
 
   .panel {
     padding: 2.5rem 1.5rem;
+  }
+
+  .panel__inner {
+    margin-top: 20%;
+  }
+
+  .form__row {
+    flex-direction: column;
+  }
+
+  .peace {
+    position: absolute;
+    top: auto;
+    bottom: 1.5rem;
+    right: 1.5rem;
   }
 }
