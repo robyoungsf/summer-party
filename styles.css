@@ -180,6 +180,10 @@ body {
   gap: 1.1rem;
 }
 
+.form[hidden] {
+  display: none;
+}
+
 .form__thanks {
   font-size: 1.1rem;
   color: #3B5033;
@@ -332,8 +336,8 @@ body {
 
 .peace {
   position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
+  top: 3.5rem;
+  right: 3.5rem;
   width: 3rem;
   height: 3rem;
   color: #3B5033;
