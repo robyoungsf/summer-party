@@ -112,14 +112,15 @@ body {
 }
 
 .fact__label {
-  font-size: 0.8rem;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: #3B5033;
 }
 
 .fact__value {
-  font-size: 1.02rem;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
 }
 
 .link {
@@ -140,8 +141,8 @@ body {
 }
 
 .details__text {
-  font-size: 1.02rem;
-  line-height: 1.3rem;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
   font-weight: 300;
 }
 
@@ -367,6 +368,10 @@ body {
   }
 
   .form__row {
+    flex-direction: column;
+  }
+
+  .fact {
     flex-direction: column;
   }
 
